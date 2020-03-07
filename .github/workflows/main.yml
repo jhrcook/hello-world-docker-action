@@ -1,16 +1,16 @@
 on: [push]
 
 jobs:
-	hello_world_job:
-		runs-on: ubuntu-latest
-		name: A job to say hello
-		steps:
-		- name: Checkout
-			uses: actions/checkout@v2
-		- name: Hellow world action step
-			uses: jhrcook/hello-world-docker-action@v1
-			id: hello
-			with:
-				who-to-greet: 'Josh'
-		- name: Get the output time
-			run: echo "The time was ${{ steps.hello.outputs.time }}"
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Hellow world action step
+      uses: jhrcook/hello-world-docker-action@v1
+      id: hello
+      with:
+        who-to-greet: 'Josh'
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
